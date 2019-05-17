@@ -113,7 +113,7 @@ This methods gets the current authorization status. While this methods provides 
 
 ### Beacons.startMonitoringForRegion
 ```javascript
-var region = {
+const region = {
   identifier: 'Estimotes',
   uuid: 'B9407F30-F5F8-466E-AFF9-25556B57FE6D'
 };
@@ -124,7 +124,7 @@ When starting monitoring for beacons, we need to define a region as the paramete
 
 ### Beacons.startRangingBeaconsInRegion
 ```javascript
-var region = {
+const region = {
   identifier: 'Estimotes',
   uuid: 'B9407F30-F5F8-466E-AFF9-25556B57FE6D'
 };

@@ -13,7 +13,7 @@ This module supports all iBeacon-compatible devices. Personally, I had the best 
 ## Installation
 Install using npm with `npm install --save react-native-ibeacon`. React Native >=0.4.0 is needed.
 
-You then need to add the Objective C part to your XCode project. Drag `RNBeacon.xcodeproj` from the `node_modules/react-native-ibeacon` folder into your XCode project Libraries folder. Click on your project in XCode, goto Build Phases then Link Binary With Libraries and drag `libRNBeacon.a` (also from the `node_modules/react-native-ibeacon`) to the list and add `CoreLocation.framework` simply by using the + sign and the search box.
+You then need to add the Objective C part to your XCode project. Drag `RNBeacon.xcodeproj` from the `node_modules/react-native-ibeacon` folder into your XCode project Libraries folder. Click on your project in XCode, goto Build Phases then Link Binary With Libraries and drag `libRNBeacon.a` (from the newly added RNBeacon.xcodeproj) to the list and add `CoreLocation.framework` simply by using the + sign and the search box.
 
 NOTE: Make sure you don't have the `RNBeacon` project open separately in XCode otherwise it won't work.
 

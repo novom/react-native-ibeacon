@@ -11,9 +11,9 @@ Looking for an Android version? Try out
 This module supports all iBeacon-compatible devices. Personally, I had the best experience with Estimote beacons, but all devices that support the iBeacon specification should work.
 
 ## Installation
-Install using npm with `npm install --save react-native-ibeacon`. React Native >=0.4.0 is needed.
+Install using yarn with `yarn add git@github.com:novom/react-native-ibeacon.git#<TAG>`. React Native >=0.4.0 is needed.
 
-You then need to add the Objective C part to your XCode project. Drag `RNBeacon.xcodeproj` from the `node_modules/react-native-ibeacon` folder into your XCode project Libraries folder. Click on your project in XCode, goto Build Phases then Link Binary With Libraries and drag `libRNBeacon.a` (from the newly added RNBeacon.xcodeproj) to the list and add `CoreLocation.framework` simply by using the + sign and the search box.
+You then need to add the Objective-C part to your XCode project. Drag `RNBeacon.xcodeproj` from the `node_modules/react-native-ibeacon` folder into your XCode project Libraries folder. Click on your project in XCode, goto Build Phases then Link Binary With Libraries and drag `libRNBeacon.a` (from the newly added RNBeacon.xcodeproj) to the list and add `CoreLocation.framework` simply by using the + sign and the search box.
 
 NOTE: Make sure you don't have the `RNBeacon` project open separately in XCode otherwise it won't work.
 
@@ -85,7 +85,7 @@ Finally when killed or sleeping and a beacon is found your whole app wont be loa
 
 ## Methods
 
-To access the methods, you need import the `react-native-ibeacon` module. This is done through `var Beacons = require('react-native-ibeacon')`.
+To access the methods, you need import the `react-native-ibeacon` module. This is done through `import Beacons from 'react-native-ibeacon'`.
 
 ### Beacons.requestWhenInUseAuthorization
 ```javascript
@@ -155,7 +155,7 @@ Beacons.shouldDropEmptyRanges(true);
 Call this method to stop sending the `beaconsDidRange` event when the beacon list is empty. This can be useful when listening to multiple beacon regions and can reduce cpu usage by 1-1.5%.
 
 ## Events
-To listen to events we need to call `DeviceEventEmitter.addListener` (`var {DeviceEventEmitter} = require('react-native')`) where the first parameter is the event we want to listen to and the second is a callback function that will be called once the event is triggered.
+To listen to events we need to call `DeviceEventEmitter.addListener` (`import { DeviceEventEmitter } from 'react-native'`) where the first parameter is the event we want to listen to and the second is a callback function that will be called once the event is triggered.
 
 ### beaconsDidRange
 This event will be called for every region in every beacon interval. If you have three regions you get three events every second (which is the default interval beacons send their signal).

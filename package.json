@@ -1,5 +1,6 @@
 {
   "name": "react-native-ibeacon",
+  "description": "iBeacon support for React Native",
   "version": "0.6.0",
   "repository": {
     "type": "git",
@@ -7,5 +8,7 @@
   },
   "license": "MIT",
   "keywords": ["react-native", "react-component", "ios", "ibeacon", "beacon"],
+  "author": "Johannes Stein",
+  "homepage": "https://github.com/novom/react-native-ibeacon#readme",
   "main": "RNBeacon.ios.js"
 }
